@@ -30,6 +30,8 @@ import { RoleEntity } from './entities/role.entity';
 import { UserRoleEntity } from './entities/user-role.entity';
 import { UserOtpEntity } from './entities/user-otp.entity';
 import { EmailSendOptionsInterface } from '@concepta/ts-common/dist/email/interfaces/email-send-options.interface';
+import { SkillModule } from './skill/skill.module';
+import { ResumeModule } from './resume/resume.module';
 
 @Module({
   imports: [
@@ -133,6 +135,8 @@ import { EmailSendOptionsInterface } from '@concepta/ts-common/dist/email/interf
         user: { entity: UserEntity },
       },
     }),
+    SkillModule,
+    ResumeModule,
   ],
 })
 export class AppModule {}
