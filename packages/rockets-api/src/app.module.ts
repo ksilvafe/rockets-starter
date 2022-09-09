@@ -23,12 +23,12 @@ import { OtpModule, OtpService } from '@concepta/nestjs-otp';
 import { EmailModule, EmailService } from '@concepta/nestjs-email';
 
 import { ormConfig } from './config/typeorm.config';
-import { UserEntity } from './app-user/entities/user.entity';
-import { OrgEntity } from './app-user/entities/org.entity';
-import { FederatedEntity } from './app-user/entities/federated-entity';
-import { RoleEntity } from './app-user/entities/role.entity';
-import { UserRoleEntity } from './app-user/entities/user-role.entity';
-import { UserOtpEntity } from './app-user/entities/user-otp.entity';
+import { UserEntity } from './entities/user.entity';
+import { OrgEntity } from './entities/org.entity';
+import { FederatedEntity } from './entities/federated-entity';
+import { RoleEntity } from './entities/role.entity';
+import { UserRoleEntity } from './entities/user-role.entity';
+import { UserOtpEntity } from './entities/user-otp.entity';
 import { EmailSendOptionsInterface } from '@concepta/ts-common/dist/email/interfaces/email-send-options.interface';
 import { SkillModule } from './skill/skill.module';
 import { ResumeModule } from './resume/resume.module';
