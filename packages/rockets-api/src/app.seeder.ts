@@ -4,9 +4,9 @@ import {
   OrgOwnerFactory,
   OrgSeeder,
 } from '@concepta/nestjs-org/dist/seeding';
-import { OrgEntity } from './entities/org.entity';
+import { OrgEntity } from './app-user/entities/org.entity';
 import { UserFactory, UserSeeder } from '@concepta/nestjs-user/dist/seeding';
-import { UserEntity } from './entities/user.entity';
+import { UserEntity } from './app-user/entities/user.entity';
 
 export class AppSeeder extends Seeder {
   async run() {

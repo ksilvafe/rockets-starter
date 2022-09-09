@@ -5,12 +5,12 @@
 
 import { DataSourceOptions } from 'typeorm';
 import { registerAs } from '@nestjs/config';
-import { UserEntity } from '../entities/user.entity';
-import { OrgEntity } from '../entities/org.entity';
-import { FederatedEntity } from '../entities/federated-entity';
-import { RoleEntity } from '../entities/role.entity';
-import { UserRoleEntity } from '../entities/user-role.entity';
-import { UserOtpEntity } from '../entities/user-otp.entity';
+import { UserEntity } from '../app-user/entities/user.entity';
+import { OrgEntity } from '../app-user/entities/org.entity';
+import { FederatedEntity } from '../app-user/entities/federated-entity';
+import { RoleEntity } from '../app-user/entities/role.entity';
+import { UserRoleEntity } from '../app-user/entities/user-role.entity';
+import { UserOtpEntity } from '../app-user/entities/user-otp.entity';
 
 export const ormConfigFactory = (): DataSourceOptions => {
   // return the configuration
