@@ -14,6 +14,15 @@ export class UserEntity extends UserPostgresEntity {
   @OneToMany(() => UserOtpEntity, (userOtp) => userOtp.assignee)
   userOtps?: UserOtpEntity[];
 
+  @OneToOne(() => UserEntity, (userOtp) => userOtp.Skill)
+  Skill: Skill;
+
+  @OneToOne(() => UserEntity, (userOtp) => userOtp.Resume)
+  Resume: Resume;
+
+  @OneToOne(() => UserEntity, (userOtp) => userOtp.Federated)
+  Federated: FederatedEntity;
+
   @Column()
   firstName: string;
 
@@ -29,15 +38,6 @@ export class UserEntity extends UserPostgresEntity {
   @Column()
   workingWith: string;
 
-  @OneToOne(() => UserEntity, (userOtp) => userOtp.Skill)
-  Skill: Skill;
-
-  @OneToOne(() => UserEntity, (userOtp) => userOtp.Resume)
-  Resume: Resume;
-
   @Column()
   level: number;
-
-  @OneToOne(() => UserEntity, (userOtp) => userOtp.Federated)
-  Federated: FederatedEntity;
 }
